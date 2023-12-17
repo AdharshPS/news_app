@@ -58,7 +58,8 @@ class _SearchScreenState extends State<SearchScreen> {
               )
             : ListView.builder(
                 itemCount:
-                    SearchScreenController().newsSearchModel.articles?.length,
+                    SearchScreenController().newsSearchModel.articles?.length ??
+                        0,
                 itemBuilder: (context, index) => newsColumn(
                   title: Provider.of<SearchScreenController>(context)
                           .newsSearchModel
